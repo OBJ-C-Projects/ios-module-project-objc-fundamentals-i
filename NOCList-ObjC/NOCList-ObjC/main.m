@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LSIAgent.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        LSIAgent *ethan = [[LSIAgent alloc]
+                             initWithCoverName: @"Ethan Hunt"
+                             realName: @"Tom Cruise"
+                             accessLevel:@8
+                             compromised:@false
+                             ];
+        
     }
+    
+    
+    
     return 0;
 }
