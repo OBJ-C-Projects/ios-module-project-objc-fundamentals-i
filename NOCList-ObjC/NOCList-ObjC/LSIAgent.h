@@ -21,8 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 //Initializing properties
 - (instancetype)initWithCoverName:(NSString *)coverName
                 realName: (NSString *)realName
-                accessLevel: (NSNumber *)accessLevel
-                compromised: (NSNumber *)compromised;
+                //Convert from NSNumber to int
+                accessLevel: (int)accessLevel
+                //Convert from NSNumber to BOOL
+                compromised: (BOOL)compromised;
 
 
 @end
