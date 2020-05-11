@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIAgent : NSObject
 
+//Creating properties
+@property NSString *coverName;
+@property NSString *realName;
+@property NSNumber *accessLevel;
+@property NSNumber *compromised;
+
 @end
 
 NS_ASSUME_NONNULL_END
