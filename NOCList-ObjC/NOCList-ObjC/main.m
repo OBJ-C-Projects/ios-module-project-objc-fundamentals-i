@@ -30,12 +30,17 @@ int main(int argc, const char * argv[]) {
         
         //loop over the agents to check the ammount of compromised agents
         NSInteger total = 0;
+        NSInteger totalClean = 0;
         for (LSIAgent *agent in agents ){
             if(agent.compromised.boolValue == true){
                 total++;
+            }else{
+                NSLog(@"Agent is clean: %@.", agent.coverName);
+                totalClean ++;
             };
         };
         NSLog(@"Total compromised agents: %li",(long)total);
+        NSLog(@"Total clean agents: %li",(long)totalClean);
     }
     
     
