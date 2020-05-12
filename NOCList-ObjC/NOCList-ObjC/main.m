@@ -54,10 +54,27 @@ int main(int argc, const char * argv[]) {
             };
         };
         
+        //Step 6
+        NSInteger low = 0;
+        NSInteger mid = 0;
+        NSInteger high = 0;
         
+        for(LSIAgent *agent in agents){
+            NSInteger accessLevel = agent.accessLevel.intValue;
+            switch (accessLevel) {
+                case 0 ... 4:
+                    low++;
+                case 5 ... 7:
+                    mid++;
+                case 8 ... 10:
+                    high++;
+                default:
+                    break;
+            }
+            
+        };
+        NSLog(@"%li low level agents, %li mid level agents, and %li high level agents", (long)low, (long)mid, (long)high);
     }
-    
-    
     
     return 0;
 }
