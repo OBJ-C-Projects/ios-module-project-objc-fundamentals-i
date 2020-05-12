@@ -41,6 +41,20 @@ int main(int argc, const char * argv[]) {
         };
         NSLog(@"Total compromised agents: %li",(long)total);
         NSLog(@"Total clean agents: %li",(long)totalClean);
+        
+        
+        //STEP 5 create another loop instead of reuse the one above to practice
+        for(LSIAgent *agent in agents){
+            if(agent.accessLevel.intValue >= 8 ){
+                if(agent.compromised.boolValue == true){
+                    NSLog(@"Real name: %@ Access level: %i **WARNING** **COMPROMISED**",agent.realName, agent.accessLevel.intValue);
+                }else{
+                    NSLog(@"Real name: %@ Access level: %i",agent.realName, agent.accessLevel.intValue);
+                };
+            };
+        };
+        
+        
     }
     
     
